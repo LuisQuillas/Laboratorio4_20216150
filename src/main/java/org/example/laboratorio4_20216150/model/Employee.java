@@ -47,6 +47,69 @@ public class Employee {
     @Column(name = "admission_date", precision = 2, scale = 2)
     private LocalDate admissionDate;
 
+    public LocalDate getAdmissionDate() {
+        return admissionDate;
+    }
+
+    public void setAdmissionDate(LocalDate admissionDate) {
+        this.admissionDate = admissionDate;
+    }
+
+    public String getRaza() {
+        return Raza;
+    }
+
+    public void setRaza(String raza) {
+        Raza = raza;
+    }
+
+    public String getEspecie() {
+        return Especie;
+    }
+
+    public void setEspecie(String especie) {
+        Especie = especie;
+    }
+
+    public String getTamaño() {
+        return Tamaño;
+    }
+
+    public void setTamaño(String tamaño) {
+        Tamaño = tamaño;
+    }
+
+    public String getRefugio() {
+        return refugio;
+    }
+
+    public void setRefugio(String refugio) {
+        this.refugio = refugio;
+    }
+
+    public String getFechaIngreso() {
+        return fechaIngreso;
+    }
+
+    public void setFechaIngreso(String fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
+    }
+
+    @Column(name = "raza", length = 20)
+    private String Raza;
+
+    @Column(name = "especie", length = 20)
+    private String Especie;
+
+    @Column(name = "tamaño", length = 20)
+    private String Tamaño;
+
+    @Column(name = "Refugio", length = 20)
+    private String refugio;
+
+    @Column(name = "fecha_ingreso", length = 20)
+    private String fechaIngreso;
+
 
 
     public Integer getEmployeeId() {
