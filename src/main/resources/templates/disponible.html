@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Mascota disponible para adoccion</title>
+</head>
+<body>
+<h2>Solo se muestran las mascotas en estado disponible</h2>
+
+
+
+<form th:action="@{/employees}" th:object="${mascota}" method="post">
+
+  <label>Nombre:
+    <input type="text" th:field="*{firstName}"/>
+  </label>
+  <br/>
+
+  <label>Especie:
+    <input type="text" th:field="*{Especie}"/>
+  </label>
+  <br/>
+
+  <label>Raza:
+    <input type="text" th:field="*{Raza}"/>
+  </label>
+  <br/>
+
+  <label>Teléfono:
+    <input type="text" th:field="*{phoneNumber}"/>
+  </label>
+  <br/>
+
+  <label>Tamaño:
+    <input type="text" th:field="*{tamaño}"/>
+  </label>
+  <br/>
+
+  <label>Refugio:
+    <input type="text" th:field="*{Refugio}"/>
+  </label>
+  <br/>
+
+  <label>Fecha de contratación:
+    <input type="date" th:field="*{fechaIngreso}"/>
+  </label>
+  <br/>
+
+  <label>Código de puesto (job_id):
+    <input type="text" th:field="*{employeeId}"/>
+  </label>
+  <br/>
+
+  
+
+  <button type="submit">Guardar</button>
+  <a th:href="@{/employees}">Cancelar</a>
+</form>
+
+</body>
+</html>

@@ -47,6 +47,9 @@ public class Employee {
     @Column(name = "admission_date", precision = 2, scale = 2)
     private LocalDate admissionDate;
 
+    public Employee() {
+    }
+
     public LocalDate getAdmissionDate() {
         return admissionDate;
     }
